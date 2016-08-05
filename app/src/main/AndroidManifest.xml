@@ -19,7 +19,12 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".MusicActivity" />
+        <activity android:name=".MovieActivity" />
+        <activity android:name=".BookActivity" />
+        <activity android:name=".GameActivity"></activity>
     </application>
 
 </manifest>
