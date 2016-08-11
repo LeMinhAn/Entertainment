@@ -79,4 +79,8 @@
     <dimen name="material_drawer_persistent_height_icon">32dp</dimen>
 
     <dimen name="fullscreen_status_bar_height">0dp</dimen>
+
+    <dimen name="inner_padding">8dp</dimen>
+    <dimen name="cover_size_mini">40dp</dimen>
+    <dimen name="fab_vertical_margin">-20dp</dimen>
 </resources>

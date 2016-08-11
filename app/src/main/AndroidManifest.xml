@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="leminhan.entertainment">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -19,12 +22,18 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".MusicActivity" />
         <activity android:name=".MovieActivity" />
         <activity android:name=".BookActivity" />
-        <activity android:name=".GameActivity"></activity>
+        <activity android:name=".GameActivity" />
+        <activity android:name=".NhacOfflineActivity" />
+        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".NhacOnlineActivity" />
+        <activity android:name=".ListMusicActivity" />
+        <activity android:name=".TrangChuActivity" />
+        <activity android:name=".LiveTVActivity"></activity>
+        <activity android:name=".TheThaoActivity"></activity>
     </application>
 
 </manifest>
