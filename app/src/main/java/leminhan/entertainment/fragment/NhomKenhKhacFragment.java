@@ -16,7 +16,7 @@ import leminhan.entertainment.adapter.NhomKenhKhacAdapter;
 public class NhomKenhKhacFragment extends Fragment {
     GridView gv;
     public static String[] prgmNameList = {"Let Us C", "c++", "JAVA", "Jsp", "Microsoft .Net", "Android", "PHP", "Jquery", "JavaScript"};
-    public static int[] prgmImages = {R.drawable.icon_download, R.drawable.icon_folder, R.drawable.icon_love, R.drawable.icon_music, R.drawable.icon_people, R.drawable.icon_playlist, R.drawable.icon_top, R.drawable.icon_upload, R.drawable.icon_category};
+    public static int[] prgmImages = {R.drawable.background_test1, R.drawable.background_test2, R.drawable.background_test9, R.drawable.background_test3, R.drawable.background_test4, R.drawable.background_test5, R.drawable.background_test6, R.drawable.background_test7, R.drawable.background_test8};
     View view;
 
     public NhomKenhKhacFragment() {

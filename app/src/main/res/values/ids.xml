@@ -22,4 +22,7 @@
     <item name="material_drawer_item_profile_setting" type="id" />
     <item name="material_drawer_item_section" type="id" />
     <item name="material_drawer_item_expandable" type="id" />
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
 </resources>

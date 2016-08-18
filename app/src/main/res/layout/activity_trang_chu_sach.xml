@@ -3,6 +3,7 @@
     xmlns:custom="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -43,61 +44,61 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="VIDEO NỔI BẬT"
-                android:textColor="#000000" />
+                android:text="SÁCH MỚI"
+                android:textColor="#FFFFFF" />
 
             <it.sephiroth.android.library.widget.HListView
-                android:id="@+id/hlv_noibat"
+                android:id="@+id/hlv_sachmoi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:hlv_dividerWidth="10dp" />
+                app:hlv_dividerWidth="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="PHIM LẺ HOT"
-                android:textColor="#000000" />
+                android:text="KHUYÊN ĐỌC"
+                android:textColor="#FFFFFF" />
 
             <it.sephiroth.android.library.widget.HListView
-                android:id="@+id/hlv_phimlehot"
+                android:id="@+id/hlv_khuyendoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:hlv_dividerWidth="10dp" />
+                app:hlv_dividerWidth="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="PHIM BỘ HOT"
-                android:textColor="#000000" />
+                android:text="VĂN HỌC NƯỚC NGOÀI"
+                android:textColor="#FFFFFF" />
 
             <it.sephiroth.android.library.widget.HListView
-                android:id="@+id/hlv_phimbohot"
+                android:id="@+id/hlv_vanhocnuocngoai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:hlv_dividerWidth="10dp" />
+                app:hlv_dividerWidth="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="CHUONG TRÌNH TV HOT"
-                android:textColor="#000000" />
+                android:text="VĂN HỌC TRONG NƯỚC"
+                android:textColor="#FFFFFF" />
 
             <it.sephiroth.android.library.widget.HListView
-                android:id="@+id/hlv_chuongtrinhhot"
+                android:id="@+id/hlv_vanhoctrongnuoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:hlv_dividerWidth="10dp" />
+                app:hlv_dividerWidth="20dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

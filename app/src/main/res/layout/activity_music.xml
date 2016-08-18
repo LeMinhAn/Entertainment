@@ -1,35 +1,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:background="@color/colorPrimary"
         android:id="@+id/toolbar"
-        android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <ImageView
-            android:contentDescription="@string/app_name"
-            android:id="@+id/menu_icon"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:onClick="toggleMenu"
-            android:src="@drawable/icon_mymusic" />
-
-        <TextView
-            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            android:id="@+id/title"
-            android:layout_height="wrap_content"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginLeft="20dp"
-            android:textColor="@android:color/white"
-            android:text="My Music"/>
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_mymusic" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/menu_icon"
+                android:text="My Music"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv_back_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_back_activity" />
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_baihat"
                 android:layout_width="match_parent"
@@ -81,6 +96,7 @@
                     android:layout_centerVertical="true"
                     android:text="0" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rl_album"
                 android:layout_width="match_parent"
@@ -266,6 +282,7 @@
                     android:layout_centerVertical="true"
                     android:text="0" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rl_yeuthich"
                 android:layout_width="match_parent"
@@ -294,9 +311,10 @@
                     android:layout_centerVertical="true"
                     android:text="0" />
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="20dp"/>
+                android:layout_height="20dp" />
 
         </LinearLayout>
 

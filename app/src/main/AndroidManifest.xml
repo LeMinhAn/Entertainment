@@ -31,9 +31,16 @@
         <activity android:name=".SearchResultActivity" />
         <activity android:name=".NhacOnlineActivity" />
         <activity android:name=".ListMusicActivity" />
-        <activity android:name=".TrangChuActivity" />
-        <activity android:name=".LiveTVActivity"></activity>
-        <activity android:name=".TheThaoActivity"></activity>
+        <activity android:name=".TrangChuPhimActivity" />
+        <activity android:name=".LiveTVActivity" />
+        <activity android:name=".TheThaoActivity" />
+        <activity android:name=".PhimActivity" />
+        <activity android:name=".TVShowActivity" />
+        <activity android:name=".ThieuNhiActivity" />
+        <activity android:name=".RadioActivity" />
+        <activity android:name=".TongHopActivity" />
+        <activity android:name=".TrangChuSachActivity" />
+        <activity android:name=".DetailsSachActivity"></activity>
     </application>
 
 </manifest>

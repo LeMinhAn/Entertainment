@@ -13,23 +13,37 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <ImageView
-            android:id="@+id/menu_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
-            android:onClick="toggleMenu"
-            android:src="@drawable/icon_televison" />
-
-        <TextView
-            android:id="@+id/title"
-            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Televison"
-            android:textColor="@android:color/white" />
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_televison" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/menu_icon"
+                android:text="Televison"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv_back_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_back_activity" />
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -90,10 +104,12 @@
                     android:text="Live TV" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_thethao"
                 android:layout_width="match_parent"
@@ -115,10 +131,12 @@
                     android:text="Thể thao" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_phim"
                 android:layout_width="match_parent"
@@ -140,10 +158,12 @@
                     android:text="Phim" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_tvshow"
                 android:layout_width="match_parent"
@@ -165,10 +185,12 @@
                     android:text="TV Show" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_thieunhi"
                 android:layout_width="match_parent"
@@ -187,14 +209,16 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/iv_thieunhi"
-                    android:text="Thiếu Nhi" />
+                    android:text="Thiếu nhi" />
 
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_radio"
                 android:layout_width="match_parent"
@@ -216,10 +240,12 @@
                     android:text="Radio" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <RelativeLayout
                 android:id="@+id/rl_tonghop"
                 android:layout_width="match_parent"
@@ -238,13 +264,15 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/iv_tonghop"
-                    android:text="Radio" />
+                    android:text="Tổng hợp" />
 
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#673ab7" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />

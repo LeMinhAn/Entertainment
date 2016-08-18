@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class MusicActivity extends AppCompatActivity {
     RelativeLayout rl_baihat, rl_album, rl_nghesi, rl_playlist, rl_danhmuc, rl_noibat, rl_top, rl_yeuthich;
-
+    ImageView iv_back_activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MusicActivity extends AppCompatActivity {
         rl_noibat = (RelativeLayout) findViewById(R.id.rl_noibat);
         rl_top = (RelativeLayout) findViewById(R.id.rl_top);
         rl_yeuthich = (RelativeLayout) findViewById(R.id.rl_yeuthich);
+        iv_back_activity = (ImageView) findViewById(R.id.iv_back_activity);
     }
 
     private void initAction() {
@@ -86,6 +88,13 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent it_yeuthich = new Intent(MusicActivity.this, NhacOnlineActivity.class);
                 startActivity(it_yeuthich);
+            }
+        });
+        iv_back_activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_back = new Intent(MusicActivity.this, CategoryActivity.class);
+                startActivity(it_back);
             }
         });
     }

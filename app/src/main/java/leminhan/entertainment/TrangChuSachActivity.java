@@ -8,25 +8,27 @@ import android.view.View;
 
 import java.util.HashMap;
 
+import it.sephiroth.android.library.widget.AdapterView;
 import it.sephiroth.android.library.widget.HListView;
 import leminhan.entertainment.adapter.NoiBatAdapter;
+import leminhan.entertainment.adapter.SachMoiAdapter;
 import leminhan.entertainment.slider.Animations.DescriptionAnimation;
 import leminhan.entertainment.slider.SliderLayout;
 import leminhan.entertainment.slider.SliderTypes.BaseSliderView;
 import leminhan.entertainment.slider.SliderTypes.TextSliderView;
 import leminhan.entertainment.slider.Tricks.ViewPagerEx;
 
-public class TrangChuActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class TrangChuSachActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     private SliderLayout mDemoSlider;
     private Toolbar toolbar;
-    private HListView hlv_noibat, hlv_phimlehot, hlv_phimbohot, hlv_chuongtrinhtvhot;
+    private HListView hlv_sachmoi, hlv_khuyendoc, hlv_vanhocnuocngoai, hlv_vanhoctrongnuoc;
     public static String[] prgmNameList = {"Let Us C", "c++", "JAVA", "Jsp", "Microsoft .Net", "Android", "PHP", "Jquery", "JavaScript"};
-    public static int[] prgmImages = {R.drawable.icon_download, R.drawable.icon_folder, R.drawable.icon_love, R.drawable.icon_music, R.drawable.icon_people, R.drawable.icon_playlist, R.drawable.icon_top, R.drawable.icon_upload, R.drawable.icon_category};
+    public static int[] prgmImages = {R.drawable.background_test1, R.drawable.background_test2, R.drawable.background_test9, R.drawable.background_test3, R.drawable.background_test4, R.drawable.background_test5, R.drawable.background_test6, R.drawable.background_test7, R.drawable.background_test8};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trang_chu);
+        setContentView(R.layout.activity_trang_chu_sach);
         mDemoSlider = (SliderLayout) findViewById(R.id.slider);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -37,7 +39,7 @@ public class TrangChuActivity extends AppCompatActivity implements BaseSliderVie
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it_back = new Intent(TrangChuActivity.this, MovieActivity.class);
+                Intent it_back = new Intent(TrangChuSachActivity.this, MovieActivity.class);
                 startActivity(it_back);
             }
         });
@@ -76,14 +78,21 @@ public class TrangChuActivity extends AppCompatActivity implements BaseSliderVie
         mDemoSlider.setDuration(4000);
         mDemoSlider.addOnPageChangeListener(this);
 
-        hlv_noibat = (HListView) findViewById(R.id.hlv_noibat);
-        hlv_phimlehot = (HListView) findViewById(R.id.hlv_phimlehot);
-        hlv_phimbohot = (HListView) findViewById(R.id.hlv_phimbohot);
-        hlv_chuongtrinhtvhot = (HListView) findViewById(R.id.hlv_chuongtrinhhot);
-        hlv_noibat.setAdapter(new NoiBatAdapter(this, prgmNameList, prgmImages));
-        hlv_phimlehot.setAdapter(new NoiBatAdapter(this, prgmNameList, prgmImages));
-        hlv_phimbohot.setAdapter(new NoiBatAdapter(this, prgmNameList, prgmImages));
-        hlv_chuongtrinhtvhot.setAdapter(new NoiBatAdapter(this, prgmNameList, prgmImages));
+        hlv_sachmoi = (HListView) findViewById(R.id.hlv_sachmoi);
+        hlv_khuyendoc = (HListView) findViewById(R.id.hlv_khuyendoc);
+        hlv_vanhocnuocngoai = (HListView) findViewById(R.id.hlv_vanhocnuocngoai);
+        hlv_vanhoctrongnuoc = (HListView) findViewById(R.id.hlv_vanhoctrongnuoc);
+        hlv_sachmoi.setAdapter(new SachMoiAdapter(this, prgmNameList, prgmImages));
+        hlv_khuyendoc.setAdapter(new SachMoiAdapter(this, prgmNameList, prgmImages));
+        hlv_vanhocnuocngoai.setAdapter(new SachMoiAdapter(this, prgmNameList, prgmImages));
+        hlv_vanhoctrongnuoc.setAdapter(new SachMoiAdapter(this, prgmNameList, prgmImages));
+        hlv_sachmoi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent it_sachmoi = new Intent(TrangChuSachActivity.this, DetailsSachActivity.class);
+                startActivity(it_sachmoi);
+            }
+        });
     }
 
     @Override

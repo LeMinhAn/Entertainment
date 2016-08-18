@@ -128,7 +128,7 @@
 
     </declare-styleable>
     <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
-        <item name="tabMaxWidth">50dp</item>
+        <item name="tabMaxWidth">100dp</item>
         <item name="tabIndicatorColor">?attr/colorAccent</item>
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabPaddingStart">12dp</item>
@@ -143,4 +143,11 @@
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="textAllCaps">true</item>
     </style>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+    </declare-styleable>
 </resources>
